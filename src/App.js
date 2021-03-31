@@ -34,7 +34,7 @@ const App = () => (
           <Route path="/day">
             <Day appointments={appointments.filter(app => app.day === 1)} />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
         </Switch>

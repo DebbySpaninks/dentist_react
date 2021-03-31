@@ -10,7 +10,7 @@ import generateRandomAppointments from "./utils/utils";
 
 const appointments = generateRandomAppointments(70);
 
-const App = () => (
+const App = ({  handleAddAppointment }) => (
   <Router>
     <div>
       <nav>
@@ -29,7 +29,10 @@ const App = () => (
       <main>
         <Switch>
           <Route path="/calendar">
-            <Calendar appointments={appointments} />
+            <Calendar
+              appointments={appointments}
+              handleAddAppointment={handleAddAppointment}
+            />
           </Route>
           <Route path="/day">
             <Day appointments={appointments.filter(app => app.day === 1)} />

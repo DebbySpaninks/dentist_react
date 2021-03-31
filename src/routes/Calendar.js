@@ -14,7 +14,7 @@ const divideByDay = appointments => {
   return appointmentsByDay;
 };
 
-const Calendar = ({ appointments }) => {
+const Calendar = ({ appointments, handleAddAppointment }) => {
   const appointmentsByDay = divideByDay(appointments);
 
   const daysInMonthJSX = Object.values(
@@ -25,6 +25,7 @@ const Calendar = ({ appointments }) => {
 
   return (
     <div className="calendarview">
+      <button onClick={() => handleAddAppointment()}>Add appointment</button>
       <div className="header">
         <div>Maandag</div>
         <div>Dinsdag</div>

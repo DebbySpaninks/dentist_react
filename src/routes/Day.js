@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Day.css";
-import AppointmentInDay from "./AppointmentInDay";
+import AppointmentInDay from "../views/AppointmentInDay";
 
 const Day = ({ appointments }) => {
   const appointmentsJSX = appointments.map(

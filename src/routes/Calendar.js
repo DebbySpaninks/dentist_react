@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Calendar.css";
-import DayInMonth from "./DayInMonth";
+import DayInMonth from "../views/DayInMonth";
 
 const divideByDay = appointments => {
   const appointmentsByDay = {};

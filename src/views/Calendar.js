@@ -14,7 +14,7 @@ const divideByDay = appointments => {
   return appointmentsByDay;
 };
 
-export default ({ appointments }) => {
+const Calendar = ({ appointments }) => {
   const appointmentsByDay = divideByDay(appointments);
 
   const daysInMonthJSX = Object.values(
@@ -36,3 +36,5 @@ export default ({ appointments }) => {
     </div>
   );
 };
+
+export default Calendar;

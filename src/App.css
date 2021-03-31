@@ -30,6 +30,6 @@ nav a:hover {
 a,
 a:focus,
 a:visited {
-  color: darksalmon;
+  color: rgb(255, 153, 119);
   outline: none;
 }

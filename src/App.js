@@ -6,11 +6,16 @@ import Home from "./routes/Home";
 import Calendar from "./routes/Calendar";
 import Day from "./routes/Day";
 
-import generateRandomAppointments from "./utils/utils";
-
-const appointments = generateRandomAppointments(70);
-
-const App = ({  handleAddAppointment }) => (
+const App = ({
+  appointments,
+  handleAddDentist,
+  handleAddPatient,
+  handleMakeDentistSick,
+  handleAddAppointment,
+  handleRemoveAppointment,
+  handlePatientSick,
+  handleMoveAppointment 
+}) => (
   <Router>
     <div>
       <nav>
@@ -32,13 +37,20 @@ const App = ({  handleAddAppointment }) => (
             <Calendar
               appointments={appointments}
               handleAddAppointment={handleAddAppointment}
+              handleMakeDentistSick={handleMakeDentistSick}
+              handlePatientSick={handlePatientSick}
             />
           </Route>
           <Route path="/day">
-            <Day appointments={appointments.filter(app => app.day === 1)} />
+            <Day appointments={appointments.filter(app => app.day === 1)} 
+              handleRemoveAppointment={handleRemoveAppointment}
+              handleMoveAppointment={handleMoveAppointment}
+            />
           </Route>
           <Route exact path="/">
             <Home />
+            <button onClick={() => handleAddDentist()}>Add dentist</button>
+            <button onClick={() => handleAddPatient()}>Add Patient</button>
           </Route>
         </Switch>
       </main>

@@ -14,18 +14,24 @@ const divideByDay = appointments => {
   return appointmentsByDay;
 };
 
-const Calendar = ({ appointments, handleAddAppointment }) => {
+const Calendar = ({
+  appointments,
+  handleMakeDentistSick,
+  handleAddAppointment,
+  handlePatientSick
+}) => {
   const appointmentsByDay = divideByDay(appointments);
 
-  const daysInMonthJSX = Object.values(
-    appointmentsByDay
-  ).map((appointmentsInDay, index) => (
-    <DayInMonth appointments={appointmentsInDay} key={index} />
-  ));
+  const daysInMonthJSX = Object.values(appointmentsByDay)
+    .map((appointmentsInDay, index) => (
+      <DayInMonth appointments={appointmentsInDay} key={index} />
+    ));
 
   return (
     <div className="calendarview">
+      <button onClick={() => handleMakeDentistSick()}>Make Dentist sick</button>
       <button onClick={() => handleAddAppointment()}>Add appointment</button>
+      <button onClick={() => handlePatientSick(43)}>Make Patient Sick</button>
       <div className="header">
         <div>Maandag</div>
         <div>Dinsdag</div>

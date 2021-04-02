@@ -14,11 +14,11 @@ const divideByDay = appointments => {
   return appointmentsByDay;
 };
 
-const Calendar = ({
+const Calendar = ({ 
   appointments,
-  handleMakeDentistSick,
   handleAddAppointment,
-  handlePatientSick
+  handleSickDentist,
+  handleSickPatient
 }) => {
   const appointmentsByDay = divideByDay(appointments);
 
@@ -29,9 +29,9 @@ const Calendar = ({
 
   return (
     <div className="calendarview">
-      <button onClick={() => handleMakeDentistSick()}>Make Dentist sick</button>
       <button onClick={() => handleAddAppointment()}>Add appointment</button>
-      <button onClick={() => handlePatientSick(43)}>Make Patient Sick</button>
+      <button onClick={() => handleSickDentist()}>Report dentist sick</button>
+      <button onClick={() => handleSickPatient(appointments)}>Report patiënt sick</button>
       <div className="header">
         <div>Maandag</div>
         <div>Dinsdag</div>

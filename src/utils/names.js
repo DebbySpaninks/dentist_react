@@ -796,65 +796,128 @@ const names = [
   },
 ];
 
-const dentistList = [
+const employees = [
   {
-    id: 1,
-    name: "Jaap van de",
-    surname: "Velde",
+    name: "Aad",
+    surname: "Groen",
     gender: "male",
-    region: "Netherlands",
-    phone: "06-012345678",
-    email: "velde@tandartspraktijkbvt.nl",
+    region: "Netherlands"
   },
   {
-    id: 2,
-    name: "Johanneke van",
-    surname: "Loon",
-    gender: "female",
-    region: "Netherlands",
-    phone: "06-012345678",
-    email: "loon@tandartspraktijkbvt.nl",
-  },
-  {
-    id: 3,
-    name: "Mirthe van",
-    surname: "Veen",
-    gender: "female",
-    region: "Netherlands",
-    phone: "06-012345678",
-    email: "mirthe@tandartspraktijkbvt.nl",
-  },
-  {
-    id: 4,
     name: "Leentje",
     surname: "Wolters",
     gender: "female",
     region: "Netherlands",
-    phone: "06-012345678",
-    email: "wolters@tandartspraktijkbvt.nl",
   },
-];
-
-const assistantList = [
   {
-    name: "Michiel de",
-    surname: "Vos",
+    name: "Pieter",
+    surname: "Meijer",
+    gender: "male",
+    region: "Netherlands"
+  },
+  {
+    name: "Michiel",
+    surname: "Gerritsen",
     gender: "male",
     region: "Netherlands",
-    phone: "06-012345678",
-    email: "vos@tandartspraktijkbvt.nl",
-    id: 1,
   },
   {
-    name: "Wies van der",
-    surname: "Horst",
+    name: "Femke",
+    surname: "Brouwer",
     gender: "female",
     region: "Netherlands",
-    phone: "06-012345678",
-    email: "horst@tandartspraktijkbvt.nl",
-    id: 2,
+  },
+  {
+    name: "Tom",
+    surname: "Schouten",
+    gender: "male",
+    region: "Netherlands"
+  },
+  {
+    name: "Mirthe",
+    surname: "Meijer",
+    gender: "female",
+    region: "Netherlands",
+  },
+  {
+    name: "Lisa",
+    surname: "Kok",
+    gender: "female",
+    region: "Netherlands"
+  },
+  {
+    name: "Femke",
+    surname: "Meijer",
+    gender: "female",
+    region: "Netherlands"
+  },
+  {
+    name: "Lonneke",
+    surname: "Sanders",
+    gender: "female",
+    region: "Netherlands",
+  },
+  {
+    name: "Christien",
+    surname: "Prins",
+    gender: "female",
+    region: "Netherlands",
+  },
+  {
+    name: "Mathijs",
+    surname: "Mol",
+    gender: "male",
+    region: "Netherlands"
+  },
+  {
+    name: "Carlijn",
+    surname: "Bos",
+    gender: "female",
+    region: "Netherlands"
+  },
+  {
+    name: "Lotte",
+    surname: "Hoekstra",
+    gender: "female",
+    region: "Netherlands",
+  },
+  {
+    name: "Aart",
+    surname: "Willems",
+    gender: "male",
+    region: "Netherlands"
+  },
+  {
+    name: "Florus",
+    surname: "Prins",
+    gender: "male",
+    region: "Netherlands"
+  },
+  {
+    name: "Valentijn",
+    surname: "Gerritsen",
+    gender: "male",
+    region: "Netherlands",
+  },
+  {
+    name: "Laurens",
+    surname: "Bakker",
+    gender: "male",
+    region: "Netherlands"
+  },
+  {
+    name: "Dirk",
+    surname: "Bos",
+    gender: "male",
+    region: "Netherlands"
+  },
+  {
+    name: "Thea",
+    surname: "Kramer",
+    gender: "female",
+    region: "Netherlands"
   },
 ];
 
 
-export { names, dentistList, assistantList };
+export { names, employees };

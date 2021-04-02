@@ -7,15 +7,15 @@ import Calendar from "./routes/Calendar";
 import Day from "./routes/Day";
 
 const App = ({
-  appointments,
-  handleAddDentist,
-  handleAddPatient,
-  handleMakeDentistSick,
-  handleAddAppointment,
-  handleRemoveAppointment,
-  handlePatientSick,
-  handleMoveAppointment 
-}) => (
+    appointments,
+    handleAddAppointment,
+    handleAddDentist,
+    handleAddPatient,
+    handleSickDentist,
+    handleSickPatient,
+    handleRemoveAppointment,
+    handleMoveAppointment
+  }) => (
   <Router>
     <div>
       <nav>
@@ -37,20 +37,21 @@ const App = ({
             <Calendar
               appointments={appointments}
               handleAddAppointment={handleAddAppointment}
-              handleMakeDentistSick={handleMakeDentistSick}
-              handlePatientSick={handlePatientSick}
+              handleSickDentist={handleSickDentist}
+              handleSickPatient={handleSickPatient}
             />
           </Route>
           <Route path="/day">
-            <Day appointments={appointments.filter(app => app.day === 1)} 
+            <Day
+              appointments={appointments.filter(app => app.day === 1)}
               handleRemoveAppointment={handleRemoveAppointment}
               handleMoveAppointment={handleMoveAppointment}
             />
           </Route>
-          <Route exact path="/">
+          <Route path="/">
             <Home />
             <button onClick={() => handleAddDentist()}>Add dentist</button>
-            <button onClick={() => handleAddPatient()}>Add Patient</button>
+            <button onClick={() => handleAddPatient()}>Add patiënt</button>
           </Route>
         </Switch>
       </main>
